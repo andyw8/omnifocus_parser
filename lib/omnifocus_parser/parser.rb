@@ -8,7 +8,7 @@ module OmnifocusParser
 
     def parse
       CSV.foreach(@csv, headers: true).map do |row|
-        Item.from_row(row)
+        Builder.from_row(row)
       end
     end
   end

@@ -1,19 +1,10 @@
 module OmnifocusParser
-  Item = Data.define(
-    :task_id,
-    :type,
-    :name,
-    :status,
-    :project,
-    :context,
-    :due_date,
-    :completion_date,
-    :duration,
-    :start_date,
-    :flagged,
-    :notes,
-    :tags
-  ) do
+  class Builder
+    MAPPING = {
+      "Project" => Project,
+      "Action" => Action
+    }
+
     def self.from_row(row)
       task_id = row.fetch("Task ID")
       type = row.fetch("Type")
@@ -29,9 +20,9 @@ module OmnifocusParser
       notes = row.fetch("Notes")
       tags = row.fetch("Tags")&.split(",")
 
-      new(
+      MAPPING.fetch(type).new(
         task_id: task_id,
-        type: type,
+        # type: type,
         name: name,
         status: status,
         project: project,
