@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "omnifocus_parser/version"
-require_relative "omnifocus_parser/item"
-require_relative "omnifocus_parser/parser"
+require "zeitwerk"
+loader = Zeitwerk::Loader.for_gem
+loader.setup
 
 module OmnifocusParser
   class Error < StandardError; end

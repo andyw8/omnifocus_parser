@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     omnifocus_parser (0.1.0)
+      zeitwerk
 
 GEM
   remote: https://rubygems.org/
@@ -58,6 +59,7 @@ GEM
     syntax_tree (4.3.0)
       prettier_print (>= 1.0.2)
     unicode-display_width (2.3.0)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   arm64-darwin-22

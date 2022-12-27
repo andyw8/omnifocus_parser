@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
+require "csv"
 
 module OmnifocusParser
   class ItemTest < Minitest::Test
