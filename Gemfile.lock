@@ -7,6 +7,12 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    debug (1.7.1)
+      irb (>= 1.5.0)
+      reline (>= 0.3.1)
+    io-console (0.6.0)
+    irb (1.6.2)
+      reline (>= 0.3.0)
     json (2.6.3)
     language_server-protocol (3.17.0.2)
     minitest (5.16.3)
@@ -17,6 +23,8 @@ GEM
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.6.1)
+    reline (0.3.2)
+      io-console (~> 0.5)
     rexml (3.2.5)
     rubocop (1.40.0)
       json (~> 2.3)
@@ -56,6 +64,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  debug
   minitest (~> 5.0)
   omnifocus_parser!
   rake (~> 13.0)
