@@ -36,6 +36,12 @@ module OmnifocusParser
       assert item.flagged
     end
 
+    def test_due_date
+      item = find_row("with due date")
+
+      assert_equal DateTime.new(2022, 11, 7, 23, 0, 0), item.due_date
+    end
+
     private
 
     def find_row(name)

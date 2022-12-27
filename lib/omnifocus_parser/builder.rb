@@ -12,10 +12,10 @@ module OmnifocusParser
       status = row.fetch("Status")
       project = row.fetch("Project")
       context = row.fetch("Context")
-      due_date = row.fetch("Due Date")
+      due_date = row.fetch("Due Date")&.then { DateTime.parse(_1) }
       completion_date = row.fetch("Completion Date")&.then { Date.parse(_1) }
       duration = row.fetch("Duration")
-      start_date = row.fetch("Start Date")&.then { Date.parse(_1) }
+      start_date = row.fetch("Start Date")&.then { DateTime.parse(_1) }
       flagged = row.fetch("Flagged") == "1"
       notes = row.fetch("Notes")
       tags = row.fetch("Tags")&.split(",")

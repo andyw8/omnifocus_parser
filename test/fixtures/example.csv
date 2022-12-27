@@ -3,3 +3,4 @@ Task ID,Type,Name,Status,Project,Context,Start Date,Due Date,Completion Date,Dur
 1.1,Action,item name,,Ruby and Rails,My Context,,,,,0,My Notes,Check Out
 1.1,Action,unflagged,,Ruby and Rails,My Context,,,,,0,My Notes,Check Out
 1.1,Action,flagged,,Ruby and Rails,My Context,,,,,1,My Notes,Check Out
+1.1,Action,with due date,,Ruby and Rails,My Context,,2022-11-07 23:00:00 +0000,,,1,My Notes,Check Out
