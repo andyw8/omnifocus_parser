@@ -16,13 +16,12 @@ module OmnifocusParser
       completion_date = row.fetch("Completion Date")&.then { Date.parse(_1) }
       duration = row.fetch("Duration")
       start_date = row.fetch("Start Date")&.then { Date.parse(_1) }
-      flagged = row.fetch("Flagged")
+      flagged = row.fetch("Flagged") == "1"
       notes = row.fetch("Notes")
       tags = row.fetch("Tags")&.split(",")
 
       MAPPING.fetch(type).new(
         task_id: task_id,
-        # type: type,
         name: name,
         status: status,
         project: project,

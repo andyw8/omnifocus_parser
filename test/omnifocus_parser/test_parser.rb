@@ -5,7 +5,7 @@ module OmnifocusParser
     def test_parse
       parser = Parser.new("test/fixtures/example.csv")
       items = parser.parse
-      assert_equal 2, items.size
+      assert_equal File.read("test/fixtures/example.csv").lines.count, items.size + 1
     end
   end
 end

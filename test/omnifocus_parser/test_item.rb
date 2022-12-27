@@ -23,5 +23,24 @@ module OmnifocusParser
       assert_equal ["Check Out"], action.tags
       assert_equal "My Notes", action.notes
     end
+
+    def test_unflagged_item
+      item = find_row("unflagged")
+
+      refute item.flagged
+    end
+
+    def test_flagged_item
+      item = find_row("flagged")
+
+      assert item.flagged
+    end
+
+    private
+
+    def find_row(name)
+      parser = Parser.new("test/fixtures/example.csv")
+      parser.parse.find { |row| row.name == name } or raise "Row not found"
+    end
   end
 end
