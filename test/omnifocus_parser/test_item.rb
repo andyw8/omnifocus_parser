@@ -42,6 +42,12 @@ module OmnifocusParser
       assert_equal DateTime.new(2022, 11, 7, 23, 0, 0), item.due_date
     end
 
+    def test_multiline
+      parser = Parser.new("test/fixtures/example_split_line.csv")
+
+      assert_equal "My Notes line 1\nMy Notes Line 2", parser.parse.last.notes
+    end
+
     private
 
     def find_row(name)
