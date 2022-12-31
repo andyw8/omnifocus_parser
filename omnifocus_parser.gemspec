@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["andyw8@users.noreply.github.com"]
 
   spec.summary = "OmniFocus parser"
-  spec.homepage = "https://gitub.com/andyw8/omnifocus_parser"
+  spec.homepage = "https://github.com/andyw8/omnifocus_parser"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
 
