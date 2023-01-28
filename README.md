@@ -4,6 +4,8 @@ This library parses a CSV export from [OmniFocus](https://www.omnigroup.com/omni
 
 Note: I wrote this gem to try out the newly added `Data` core class in Ruby ([learn more](https://blog.saeloun.com/2022/11/22/data-immutable-object.html)), so it can only be used with Ruby 3.2 or newer.
 
+Note: The CSV export is missing some fields. If you need those, [RubyFocus](https://rubygems.org/gems/rubyfocus) is probably be a better choice.
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
